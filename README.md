@@ -1,17 +1,17 @@
-=== WP CLI Post Importer ===
-Contributors: anamwp
-Donate link: https://anam.rocks
-Tags: wp-cli, import, posts, api, command-line
-Requires at least: 4.5
-Tested up to: 6.7.1
-Requires PHP: 5.6
-Stable tag: 0.1.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# WP CLI Post Importer #
+**Contributors:** anamwp  
+**Donate link:** https://anam.rocks  
+**Tags:** wp-cli, import, posts, api, command-line  
+**Requires at least:** 4.5  
+**Tested up to:** 6.7.1  
+**Requires PHP:** 5.6  
+**Stable tag:** 0.1.0  
+**License:** GPLv2 or later  
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
 Import and manage posts from external APIs using WP-CLI commands. Fetches sample posts with featured images for testing and development.
 
-== Description ==
+## Description ##
 
 WP CLI Post Importer is a WordPress plugin that provides WP-CLI commands to import and manage posts from external APIs. It's designed for developers who need to quickly populate their WordPress sites with sample content for testing and development purposes.
 
@@ -34,7 +34,7 @@ The plugin fetches sample posts from https://dummyjson.com/posts, which provides
 * Site builders creating demo content
 * Development and staging environments
 
-== Installation ==
+## Installation ##
 
 **Requirements:**
 * WordPress 4.5 or higher
@@ -55,7 +55,7 @@ wp help start
 
 This should list the available import and delete commands provided by the plugin.
 
-== WP-CLI Commands ==
+## WP-CLI Commands ##
 
 The plugin provides four main WP-CLI commands for importing and managing posts:
 
@@ -106,35 +106,35 @@ wp start delete-all-posts
 * Proper post metadata
 * Published status posts ready for viewing
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
-= Do I need WP-CLI installed to use this plugin? =
+### Do I need WP-CLI installed to use this plugin? ###
 
 Yes, this plugin requires WP-CLI to be installed on your server. The plugin provides WP-CLI commands and cannot function without it. You can install WP-CLI by following the instructions at https://wp-cli.org/
 
-= Where do the posts come from? =
+### Where do the posts come from? ###
 
 Posts are fetched from https://dummyjson.com/posts, which provides realistic dummy content including titles, body text, and metadata. This is perfect for testing and development purposes.
 
-= Will this plugin create duplicate posts? =
+### Will this plugin create duplicate posts? ###
 
 No, the plugin checks for existing posts with the same title before importing. If a post with the same title already exists, it will skip importing that post and show a warning message.
 
-= What happens to the featured images when I delete posts? =
+### What happens to the featured images when I delete posts? ###
 
 When you delete posts using the delete commands, the plugin automatically removes all associated media files including featured images to keep your media library clean.
 
-= Can I customize which posts get imported? =
+### Can I customize which posts get imported? ###
 
 Currently, the plugin imports posts from the DummyJSON API as-is. For custom import functionality, you would need to modify the plugin code or create your own custom implementation.
 
-= Is this plugin safe to use on production sites? =
+### Is this plugin safe to use on production sites? ###
 
 This plugin is designed for development and testing environments. While it includes safeguards against duplicate content, we recommend using it primarily on staging or development sites.
 
-== Changelog ==
+## Changelog ##
 
-= 0.1.0 =
+### 0.1.0 ###
 * Initial release
 * Added `wp start import-posts` command for importing posts from API
 * Added `wp start delete-posts` command for cleaning up imported posts
@@ -145,12 +145,12 @@ This plugin is designed for development and testing environments. While it inclu
 * Duplicate post detection and prevention
 * Complete media cleanup on post deletion
 
-== Upgrade Notice ==
+## Upgrade Notice ##
 
-= 0.1.0 =
+### 0.1.0 ###
 Initial release of WP CLI Post Importer. Install to get WP-CLI commands for importing sample posts with featured images.
 
-== Technical Details ==
+## Technical Details ##
 
 **API Endpoint:** https://dummyjson.com/posts
 **Image Source:** https://picsum.photos/ (for featured images)
